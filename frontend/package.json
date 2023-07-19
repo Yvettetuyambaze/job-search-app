@@ -1,7 +1,6 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node ./node_modules/parcel/bin/cli index.html",
@@ -15,5 +14,6 @@
   },
   "devDependencies": {
     "sass": "^1.22.12"
-  }
+  },
+  "description": ""
 }

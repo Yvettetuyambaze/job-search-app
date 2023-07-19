@@ -1,3 +1,4 @@
+require('dotenv').config();
 const createServer = require('http').createServer;
 const url = require('url');
 const axios = require('axios');
@@ -11,6 +12,7 @@ const headers = {
 };
 
 const server = createServer((req, res) => {
+  console.log('Config:', config);
   const requestURL = url.parse(req.url);
   const decodedParams = decodeParams(new URLSearchParams(requestURL.search));
   const { search, location, country = 'gb' }  = decodedParams;
@@ -32,7 +34,7 @@ const server = createServer((req, res) => {
 });
 
 
-server.listen(3000, () => {
+server.listen(7000, () => {
   console.log(chalk.green('Server listening'));
 } );
 
